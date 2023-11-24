@@ -1,12 +1,15 @@
 /* Typography */
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@900&display=swap');
 
 /* Global Styling */
 :root {
-    --yellow: #FFC90E; /* Define your main color variable */
+    --yellow: #FFBD59; /* Define your main color variable */
     --dark-violet:#240046; /* Define your secondary color variable */
-    --light-violet: #9D4EDD; /* Define your tertiary color variable */
+    --light-violet: #7F03BB; /* Define your tertiary color variable */
     --normal-violet:#5A189A;
+    --gray:#212529;
     --box-shadow: black; /* Define your box shadow variable */
 }
 
@@ -17,7 +20,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Noto Sans JP', sans-serif;
 }
 
 a {
@@ -66,23 +69,24 @@ nav {
     flex-wrap: wrap;
     flex-direction: row;
     padding: 0 75px;
-    height: 50px;
-    position: relative;
-    background: var(--normal-violet);
+    height: 70px;
+    position: sticky;
+    background: var(--gray);
+    text-transform: uppercase;
+    color: var(--yellow);
 }
 
 /* Step 2: Navigation Text Styles */
 nav p {
     font-size: 20px;
-    font-weight: bold;
-    color: white;
     cursor: pointer;
     transition: none;
+    font-weight: 1000;
 }
 
 /* Step 3: Navigation Span Styles */
 nav p span {
-    color: var(--yellow);
+    color: white;
     /* transition: ; */
 }
 
@@ -108,6 +112,7 @@ nav ul li:hover {
     /* border: ;
     border-radius: ;
     transition: ; */
+    color: white;
 }
 
 /* Step 7: Navigation List Item Anchor Styles */
@@ -119,82 +124,137 @@ nav ul li a {
 
 /* Step 8: Navigation List Item Anchor Hover Styles */
 nav ul li:hover > a {
-    /* color: ;
-    transition: ; */
+    color: white;
+    /* transition: width 2s, height 4s; */
 }
 
 /* Step 9: Responsive Styles for Navigation */
 @media only screen and (max-width: 880px) {
     nav {
-        /* margin: ; */
+        padding: 0 10px;
     }
 }
 
 /* Step 10: Responsive Styles for Hidden Navigation on Small Screens */
 @media only screen and (max-width: 700px) {
     nav ul {
-        /* display: ; */
+        display: none;
     }
 }
 
 /* Slider Section Styling */
 
 /* Step 1: Section Styles */
-section {
-    /* position: ;
-    background-color: ;
-    height: ; */
-}
 
 /* Step 2: Content Styles */
 .content {
-    /* position: ;
-    left: ;
-    top: ;
-    transform: ;
-    text-align: ;
-    color: ;
-    width: ; */
+    /* 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; */
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 100px 75px;
+    height: auto;
+    background: var(--gray);
+    overflow: hidden;
+}
+
+.content img{
+    height: 40vw;
+    position: absolute;
+    left: 45%;
+    top: 10%;
+    opacity: 0.7;
 }
 
 /* Step 3: Heading Styles */
+.text{
+    text-align: left;
+    color: white;
+    width: 100%;
+    z-index: 1;
+}
+
 .content h2 {
-    /* font-size: ; */
+    font-size: 45px;
+    text-transform: uppercase;
+    font-weight: 1000;
+}
+
+.content span {
+    color: var(--yellow);
 }
 
 /* Step 4: Paragraph Styles */
 .content p {
-    /* font-size: ; */
+    font-size: 18px;
+    max-width: 500px;
+    color: var(--yellow);
+    margin-top: 20px;
 }
 
 /* Step 5: Responsive Styles */
 @media only screen and (max-width: 945px) {
     .content h2 {
-        /* font-size: ; */
+        font-size: 30px;
     }
     
     .content p {
-        /* font-size: ; */
+        font-size: 16px;
+        max-width: 400px;
     }
 }
 
 @media only screen and (max-width: 680px) {
     .content h2 {
-        /* font-size: ; */
+        font-size: 40px;
     }
     
     .content p {
-        /* font-size: ; */
+        font-size: 15px;
+        max-width: 200px;
+    }
+
+    .content img{
+        height: 50vw;
     }
 }
 
-@media only screen and (max-width: 300px) {
+@media only screen and (max-width: 460px) {
     .content h2 {
-        /* font-size: ; */
+        font-size: 30px;
     }
     
     .content p {
-        /* display: ; */
+        display: none;
+    }
+
+    .content{
+        height: 25em;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .content h2 {
+        font-size: 25px;
+    }
+
+    .content{
+        padding: 10px
+    }
+    
+    .content p {
+        display: none;
+    }
+
+    .content{
+        height: 20em;
     }
 }
 
