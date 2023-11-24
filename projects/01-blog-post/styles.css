@@ -151,8 +151,8 @@ nav ul li:hover > a {
     align-items: center;
     flex-wrap: wrap;
     flex-direction: row;
-    padding: 110px 75px;
-    height: auto;
+    padding: 125px 75px;
+    height: 500px;
     overflow: hidden;
 }
 
@@ -187,7 +187,6 @@ nav ul li:hover > a {
     font-size: 18px;
     max-width: 500px;
     color: var(--yellow);
-    margin-top: 20px;
 }
 
 /* Step 5: Responsive Styles */
@@ -274,6 +273,7 @@ nav ul li:hover > a {
     text-align: center; 
     color: var(--gray);
     font-size: 45px;
+    padding: 50px;
     margin-bottom: 10px;
 }
 
