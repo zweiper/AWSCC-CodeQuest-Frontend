@@ -11,6 +11,7 @@
     --normal-violet:#5A189A;
     --gray:#212529;
     --yellow2:#fca311;
+    --yellow3: #FFBD59;
     --dark-yellow: #B88126;
     --box-shadow: black; /* Define your box shadow variable */
 }
@@ -43,7 +44,8 @@ html:focus-within {
 }
   
 body {
-    min-height: 100vh;
+    /* min-height: 100vh; */
+    height: auto;
     text-rendering: optimizeSpeed;
     line-height: 1.5;
     background-color: #eee;
@@ -58,6 +60,11 @@ img, picture {
 
 article, aside, footer, header, nav, section {
 	display: block;
+}
+
+#home{
+    display: flex;
+    flex-direction: column;
 }
 
 /* Navigation Styling */
@@ -104,10 +111,7 @@ nav ul {
 /* Step 5: Navigation List Item Styles */
 nav ul li {
     border: none;
-    /* padding: ;
-    border-radius: ; */
     cursor: pointer;
-    /* transition: ; */
 }
 
 /* Step 6: Navigation List Item Hover Styles */
@@ -269,11 +273,9 @@ nav ul li:hover > a {
 
 /* Step 1: Main Content Container Styles */
 .main-content {
-    display: relative;
-    flex-direction: row;
-    text-align: center;
-    /* margin: ;
-    gap: ; */
+    position: relative;
+    height: 100%;
+    width: 100%;
 }
 
 /* @media only screen and (max-width: 1124px) {
@@ -287,9 +289,10 @@ nav ul li:hover > a {
 .blog{
     height: 70vw;
     width: 100%;
-    background: linear-gradient(to bottom, var(--yellow2), var(--yellow));
+    background: linear-gradient(to bottom, var(--yellow3), var(--yellow));
     padding: 25px 75px;
-    display: relative;
+    position: relative;
+    overflow: hidden;
 }
 
 .blog .posts {
@@ -303,6 +306,7 @@ nav ul li:hover > a {
     font-size: 40px;
     font-weight: 500;
     margin-bottom: 25px;
+    text-align: center;
 }
 
 /* Step 4: Post Styles */
@@ -317,24 +321,24 @@ nav ul li:hover > a {
 .post-image {
     height: 477px;
     width: 403px;
-    /* transition: ; */
 }
 
-
 /* Step 6: Hover Effect on Post Image */
-.post:hover .post-image img {
-    /* transform: ;
-    transition: ; */
+.post:hover {
+    transform: scale(1.1);
+    transition: all 0.5 ease-in;
+    cursor: pointer;
 }
 
 /* Step 7: Post Image Inner Styles */
 .post-image img {
     height: 100%;
     object-fit: cover;
-    width: 500px;
+    width: 100%;
 }
 
 /* Step 8: Post Content Styles */
+
 .post-content .overlap-wrapper{
     position: absolute;
     transition: all 0.2s ease;
@@ -346,6 +350,11 @@ nav ul li:hover > a {
     top: 0;
     padding: 50px;
     overflow: hidden;
+}
+
+.overlap-wrapper:hover{
+    opacity: 0;
+    transition: 0.5 ease-in;
 }
 
 /* Step 9: Post Title Styles */
@@ -384,65 +393,71 @@ nav ul li:hover > a {
 }
 
 /* Step 12: Responsive Styles */
-@media only screen and (max-width: 992px) {
-    .main-content {
-        /* flex-direction: ; */
+@media only screen and (max-width: 1320px) {
+    /* .main-content {
+        align-items: center;
+    } */
+
+    .blog .posts {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 50em;
     }
+        
 }
 
 /* Step 13: Responsive Styles for Posts */
 @media only screen and (max-width: 500px) {
-    .main-content {
-        /* margin: ; */
-    }
+    /* .main-content {
+        margin: ; 
+    } */
 
-    .post {
-        /* flex-direction: ; */
+    .blog .posts {
+        grid-template-columns: repeat(1, 1fr);
+        align-items: center;
+        height: 100em;
     }
 }
 
-/* Sidebar Styling */
+/* Popular Space */
 
 /* Step 1: Sidebar Container Styles */
-.sidebar {
-    /* text-align: ; */
-    display: flex;
-    flex-direction: column;
+.p-blogs {
+    padding: 25px 75px;
     position: relative;
-    /* flex-wrap: ;
-    align-items: ;
-    align-content: ; */
+    color: var(--yellow);
 }
 
-/* Step 2: Popular Posts Container Styles */
-.popular-posts-side {
-    /* margin: ;
-    width: ; */
+.p-blogs .p-contain {
+    width: 100%;
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5em 15em;
+    overflow: hidden;
+    padding-bottom: 8em;
 }
 
-/* Step 3: Popular Posts Heading Styles */
-.popular-posts-side h2, .social-side h2 {
-    /* font-size: ;
-    color: ;
-    font-weight: ;
-    padding-bottom: ;
-    padding-top: ; */
+.p-blogs h2{
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 25px;
+    text-align: center;
 }
 
-/* Step 4: Popular Post Styles */
-.popular-post {
-    /* position: ;
-    background-color: ;
-    margin-bottom: ;
-    box-shadow: ;
-    display: ;
-    align-items: ;
-    flex-wrap: ;
-    flex-direction: ;
-    align-content: ;
-    padding: ;
-    gap: ;
-    transition: ; */
+.popular-post-content{
+    position: absolute;
+    transition: all 0.2s ease;
+    width: 562px;
+    height: 300px;
+    background: linear-gradient(180deg, var(--yellow3) 0%, rgb(0, 0, 0) 45%);
+    opacity: 0.8;
+    top: 0;
+    padding: 100px 50px;
+    overflow: hidden;
+}
+
+.b{
+    top: 35em;
 }
 
 /* Step 5: Popular Post Hover Styles */
@@ -454,28 +469,29 @@ nav ul li:hover > a {
 
 /* Step 6: Popular Post Image Styles */
 .popular-post-image {
-    /* width: ;
-    height: ; */
+    width: 562px;
+    height: 300px;
+    border-radius: 5px;
 }
 
 /* Step 7: Popular Post Image Hover Styles */
 .popular-post-image img {
-    /* min-width: ;
-    min-height: ;
-    object-fit: ; */
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
 }
 
 /* Step 8: Popular Post Title Styles */
 .popular-post-title {
-    /* font-size: ;
-    color: ;
-    font-weight: ; */
+    color: white;
+    font-size: 30px;
 }
 
 /* Step 9: Popular Post Description Styles */
 .popular-post-desc {
-    /* font-size: ;
-    color: ; */
+    line-height: 25px;
+    font-size: 15px;
+    color: white;
 }
 
 /* Step 10: Responsive Styles for Popular Posts Container */
