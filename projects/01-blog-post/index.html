@@ -36,8 +36,8 @@
         </header>
 
         <main class="main-content">
-            <div class="divider"><h3>BLOGS</h3></div>
             <div class="blog"> <!-- Created a div to contain the "blog" -->
+                <h2>BLOGS</h2>
                 <article class="posts"> <!-- Created an article element for "posts" to group the individual blog posts -->
                     <div class="post"> <!-- Created individual divs for the  "post" -->
                         <div class="post-image"> <!-- Inside each post div, create a div for the "post-image" -->
@@ -46,12 +46,16 @@
                     
                         <div class="post-content"> <!-- Inside each post div is a "post-content" to contain the post title, info, and summary -->
                         
-                            <a class="post-title">Unveiling the Blueprint - Mastering HTML Document Structure</a> <!-- Inside the post-content div is a created anchor tag for the "post-title" -->
+                            <div class="overlap-wrapper">
+                                <a class="post-title">Unveiling the Blueprint - Mastering HTML Document Structure</a>
+                            </div> <!-- Inside the post-content div is a created anchor tag for the "post-title" -->
                         
-                            <p class="post-info">Posted on November 13, 2023 by AWSCC-DSWD</p> <!-- Inside the post-content div is a created paragraph for the "post-info" -->
-                            <hr class="divider-line">
-                            <p class="post-summary"> <!-- Inside the post-content div is a created paragraph for the  "post-summary" --> Imagine you're about to embark on a journey to build your dream house. What's the first thing you need? A solid blueprint, right? Well, welcome to the world of web development, where your canvas is a blank web page, and your blueprint is the HTML document structure.
-                            </p>
+                            <div class="details">
+                                <p class="post-info">Posted on November 13, 2023 by AWSCC-DSWD</p> <!-- Inside the post-content div is a created paragraph for the "post-info" -->
+                                <p class="post-summary"> <!-- Inside the post-content div is a created paragraph for the  "post-summary" -->
+                                    Imagine you're about to embark on a journey to build your dream house. What's the first thing you need? A solid blueprint, right? Well, welcome to the world of web development, where your canvas is a blank web page, and your blueprint is the HTML document structure.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 
@@ -62,12 +66,15 @@
                             <img src="images/img2.jpeg" alt="">
                         </div>
                         <div class="post-content">
-                            <a class="post-title">Mastering the Art: Creating Interactive Web Experiences</a>
-                            <p class="post-info">Posted on November 12, 2023 by AWSCC-DSWD</p>
-                            <hr class="divider-line">
-                            <p class="post-summary">
-                                Explore the art of creating contact forms, surveys, and more. Understand how to collect user data, validate inputs, and enhance the user experience. From simple text inputs to radio buttons and dropdown menus, we'll cover it all in this exciting journey into web forms.
-                            </p>
+                            <div class="overlap-wrapper">
+                                <a class="post-title">Mastering the Art: Creating Interactive Web Experiences</a>
+                            </div>
+                            <div class="details">
+                                <p class="post-info">Posted on November 12, 2023 by AWSCC-DSWD</p>
+                                <p class="post-summary">
+                                    Explore the art of creating contact forms, surveys, and more. Understand how to collect user data, validate inputs, and enhance the user experience. From simple text inputs to radio buttons and dropdown menus, we'll cover it all in this exciting journey into web forms.
+                                </p>
+                            </div>
                         </div>
                     </div>
 
@@ -76,12 +83,15 @@
                             <img src="images/img3.jpeg" alt="">
                         </div>
                         <div class="post-content">
-                            <a class="post-title">Revolutionize Web Design: Crafting Dynamic Layouts</a>
-                            <p class="post-info">Posted on November 11, 2023 by AWSCC-DSWD</p>
-                            <hr class="divider-line">
-                            <p class="post-summary">
-                                Unlock the magic of CSS Flexbox and transform your web layout! Say goodbye to the days of complex grids and welcome the simplicity and flexibility of Flexbox. Learn how to create responsive and dynamic layouts that adapt effortlessly to different screen sizes.
-                            </p>
+                            <div class="overlap-wrapper">
+                                <a class="post-title">Revolutionize Web Design: Crafting Dynamic Layouts</a>
+                            </div>
+                            <div class="details">
+                                <p class="post-info">Posted on November 11, 2023 by AWSCC-DSWD</p>
+                                <p class="post-summary">
+                                    Unlock the magic of CSS Flexbox and transform your web layout! Say goodbye to the days of complex grids and welcome the simplicity and flexibility of Flexbox. Learn how to create responsive and dynamic layouts that adapt effortlessly to different screen sizes.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </article>
