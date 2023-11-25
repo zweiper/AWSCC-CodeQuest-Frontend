@@ -75,8 +75,9 @@ nav {
     text-transform: uppercase;
     color: var(--yellow);
     width: 100%;
-    z-index: 1;
+    z-index: 5;
     background: var(--gray);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
 /* Step 2: Navigation Text Styles */
@@ -151,17 +152,17 @@ nav ul li:hover > a {
     align-items: center;
     flex-wrap: wrap;
     flex-direction: row;
-    padding: 125px 75px;
+    padding: 105px 75px;
     height: 500px;
     overflow: hidden;
 }
 
 .content img{
-    height: 40vw;
+    height: 28vw;
+    width: 70%;
     position: absolute;
-    left: 45%;
-    top: 20%;
-    opacity: 0.7;
+    left: 40%;
+    top: 15%;
 }
 
 /* Step 3: Heading Styles */
@@ -173,7 +174,7 @@ nav ul li:hover > a {
 }
 
 .content h2 {
-    font-size: 45px;
+    font-size: 40px;
     text-transform: uppercase;
     font-weight: 1000;
 }
@@ -187,9 +188,25 @@ nav ul li:hover > a {
     font-size: 18px;
     max-width: 500px;
     color: var(--yellow);
+    margin-top: -100px;
 }
 
 /* Step 5: Responsive Styles */
+@media only screen and (max-width: 1080px) {
+    .content h2 {
+        font-size: 30px;
+    }
+    
+    .content p {
+        font-size: 16px;
+        max-width: 400px;
+    }
+
+    .content img{
+        top: 30%
+    }
+}
+
 @media only screen and (max-width: 945px) {
     .content h2 {
         font-size: 30px;
@@ -201,7 +218,7 @@ nav ul li:hover > a {
     }
 }
 
-@media only screen and (max-width: 680px) {
+@media only screen and (max-width: 785px) {
     .content h2 {
         font-size: 40px;
     }
@@ -216,7 +233,7 @@ nav ul li:hover > a {
     }
 }
 
-@media only screen and (max-width: 460px) {
+@media only screen and (max-width: 685px) {
     .content h2 {
         font-size: 30px;
     }
@@ -251,71 +268,58 @@ nav ul li:hover > a {
 /* Main Content Section Styling */
 
 /* Step 1: Main Content Container Styles */
-/* .main-content {
+.main-content {
     display: relative;
-    align-items: center;
     flex-direction: row;
     text-align: center;
-    margin: ;
-    gap: ;
+    /* margin: ;
+    gap: ; */
 }
 
-@media only screen and (max-width: 1124px) {
+/* @media only screen and (max-width: 1124px) {
     .main-content {
-        /* margin: ; 
+        margin: ; 
     }
-} 
-*/
+}  */
 
-.divider{
-    width: 100%;
-    background: linear-gradient(to right, var(--dark-yellow), var(--yellow));
-    text-align: center; 
-    color: var(--gray);
-    font-size: 45px;
-    padding: 50px;
-    margin-bottom: 10px;
-}
-
-.divider-line{
-    border-style: solid;
-    color: white;
-    background: white;
-}
 
 /* Step 2: Blog Section Styles */
-.blog {
-    margin: 0 75px;
-    height: 50vw;
-    position: relative;
+.blog{
+    height: 70vw;
+    width: 100%;
+    background: linear-gradient(to bottom, var(--yellow2), var(--yellow));
+    padding: 25px 75px;
+    display: relative;
 }
 
-/* Step 3: Sidebar Section Styles */
-/* .sidebar {
-    flex: row ;
-} */
+.blog .posts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    height: auto;
+}
+
+.blog h2{
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
 
 /* Step 4: Post Styles */
 .post {
-    display: grid;
-    grid-template-columns: 2, 1fr;
-    display: relative;
-    border: 1px solid black;
-    background: linear-gradient(to right, var(--yellow), var(--yellow2));
+    position: relative;
     width: 100%;
     height: 300px;
-    /* background-color: ;
-    box-shadow: ;*/
     margin-bottom: 30px;
 }
 
 /* Step 5: Post Image Styles */
 .post-image {
-    height: 100%;
-    width: auto;
+    height: 477px;
+    width: 403px;
     /* transition: ; */
-    overflow: hidden;
 }
+
 
 /* Step 6: Hover Effect on Post Image */
 .post:hover .post-image img {
@@ -325,31 +329,44 @@ nav ul li:hover > a {
 
 /* Step 7: Post Image Inner Styles */
 .post-image img {
-    height: 25vw;
-    /* transition: ; */
+    height: 100%;
     object-fit: cover;
     width: 500px;
 }
 
 /* Step 8: Post Content Styles */
-.post-content {
-    padding: 0;
-    grid-column: 2;
-    color: var(--gray);
-    padding: 15px;
-    /* display: ;
-    flex-direction: ;
-    flex-wrap: ; */
-    /* justify-content: ; */
+.post-content .overlap-wrapper{
+    position: absolute;
+    transition: all 0.2s ease;
+    width: 403px;
+    height: 477px;
+    left: 0;
+    background: linear-gradient(180deg, rgba(161.5, 135.44, 43.07, 0.8) 0%, rgb(0, 0, 0) 70.31%);
+    opacity: 0.8;
+    top: 0;
+    padding: 50px;
+    overflow: hidden;
 }
 
 /* Step 9: Post Title Styles */
 .post-title {
-    max-width: 50px;
     font-size: 30px;
-    font-weight: bold;
     cursor: pointer;
-    text-align: center;
+    color: var(--yellow);
+    height: 100%;
+    max-width: 300px;
+    text-align: left;
+    position: absolute;
+    left: 10%;
+    top: 55%;
+}
+
+.details{
+    text-align: left;
+    border-top: 1px solid var(--gray);
+    padding: 10px 15px;
+    margin-top: 30px;
+    width: 403px;
 }
 
 /* Step 10: Post Info Styles */
