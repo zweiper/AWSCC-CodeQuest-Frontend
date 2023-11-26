@@ -6,14 +6,10 @@
 /* Global Styling */
 :root {
     --yellow: #FFBD59; /* Define your main color variable */
-    --dark-violet:#240046; /* Define your secondary color variable */
-    --light-violet: #7F03BB; /* Define your tertiary color variable */
-    --normal-violet:#5A189A;
     --gray:#212529;
     --yellow2:#fca311;
     --yellow3: #fcc36d;
-    --dark-yellow: #B88126;
-    --box-shadow: black; /* Define your box shadow variable */
+    --white: #ffff;
 }
 
 /* Reset and Normalize */
@@ -44,7 +40,6 @@ html:focus-within {
 }
   
 body {
-    /* min-height: 100vh; */
     height: auto;
     text-rendering: optimizeSpeed;
     line-height: 1.5;
@@ -95,9 +90,13 @@ nav p {
     font-weight: 1000;
 }
 
+nav a{
+ color: var(--yellow);   
+}
+
 /* Step 3: Navigation Span Styles */
 nav p span {
-    color: white;
+    color: var(--white);
 }
 
 /* Step 4: Navigation List Styles */
@@ -117,7 +116,7 @@ nav ul li {
 /* Step 6: Navigation List Item Hover Styles */
 nav ul li:hover {
     transition: ease-in-out;
-    color: white;
+    color: var(--white);
 }
 
 /* Step 7: Navigation List Item Anchor Styles */
@@ -127,7 +126,7 @@ nav ul li a {
 
 /* Step 8: Navigation List Item Anchor Hover Styles */
 nav ul li:hover > a {
-    color: white;
+    color: var(--white);
 }
 
 /* Step 9: Responsive Styles for Navigation */
@@ -145,8 +144,6 @@ nav ul li:hover > a {
 }
 
 /* Slider Section Styling */
-
-/* Step 1: Section Styles */
 
 /* Step 2: Content Styles */
 .content {
@@ -172,7 +169,7 @@ nav ul li:hover > a {
 /* Step 3: Heading Styles */
 .text{
     text-align: left;
-    color: white;
+    color: var(--white);
     width: 100%;
     z-index: 1;
 }
@@ -279,18 +276,10 @@ nav ul li:hover > a {
     background: linear-gradient(to bottom, var(--yellow), var(--yellow3));
 }
 
-/* @media only screen and (max-width: 1124px) {
-    .main-content {
-        margin: ; 
-    }
-}  */
-
-
 /* Step 2: Blog Section Styles */
 .blog{
     height: auto;
     width: 100%;
-    
     padding: 25px 75px;
     padding-bottom: 100px;
     position: relative;
@@ -576,16 +565,9 @@ nav ul li:hover > a {
     gap: 20px
 }
 
-
 .social-links div img{
     width: 100px;
     height: 100px;
-}
-
-/* Step 13: Social Side Link Styles */
-.social-side div a {
-    /* max-width: ;
-    transition: ; */
 }
 
 /* Step 14: Social Side Link Hover Styles */
@@ -614,93 +596,42 @@ nav ul li:hover > a {
     }
 }
 
-
 /* Footer Styling */
 
 /* Step 1: Footer Container Styles */
-.container footer {
-    /* background-color: ;
-    color: ; */
+footer {
+    color: var(--yellow);
+    padding: 25px 75px;
 }
 
 /* Step 2: Footer Boxes Container Styles */
-.container footer .footerBoxes {
-    /* display: ;
-    flex-direction: ;
-    align-content: ;
-    justify-content: ;
-    align-items: ;
-    gap: ;
-    padding: ; */
+footer .footerBoxes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+footer hr{
+    margin: 15px 0;
+    opacity: 0.5;
+    border: none;
+    height: 1px;
+    color: var(--white); 
+    background-color: var(--white);
+}
+
+.copy-right {
+    text-align: center;
+}
+
+.foot-hr{
+    margin-top: 30px;
 }
 
 /* Step 3: Responsive Styles for Footer Boxes Container */
-@media only screen and (max-width: 1000px) {
-    .container footer .footerBoxes {
-        /* padding: ; */
+@media only screen and (max-width: 480px) {
+    footer .footerBoxes {
+        flex-wrap: wrap;
     }
 }
-
-/* Step 4: Responsive Styles for Footer Boxes Container (Mobile) */
-@media only screen and (max-width: 600px) {
-    .container footer .footerBoxes {
-        /* flex-direction: ; */
-    }
-}
-
-/* Step 5: Footer Box Styles */
-.container footer .footerBoxes .footerBox {
-    /* flex: ;
-    text-align: ; */
-}
-
-/* Step 6: Footer Box Heading Styles */
-.container footer .footerBoxes .footerBox h3 {
-    /* color: ;
-    font-size: ;
-    font-weight: ;
-    letter-spacing: ;
-    padding-bottom: ; */
-}
-
-/* Step 7: Footer Box Divider Styles */
-.container footer .footerBoxes .footerBox hr {
-    /* height: ;
-    width: ;
-    background: ;
-    border: ;
-    margin-bottom: ; */
-}
-
-/* Step 8: Footer Box Text Styles */
-.container footer .footerBoxes .footerBox p {
-    /* font-size: ;
-    color: ; */
-}
-
-/* Step 9: Footer Splitter Styles */
-.container footer .splitter {
-    /* height: ;
-    width: ;
-    margin: ;
-    background: ;
-    border: ;
-    margin-bottom: ; */
-}
-
-/* Step 10: Copy-Right Text Styles */
-.copy-right {
-    /* font-size: ;
-    width: ;
-    text-align: ;
-    opacity: ;
-    padding: ; */
-}
-
-/* Responsive Design */
-
-/* Add your own responsive design styles here */
-
-/* Additional Tips */
-
-/* Add any additional styling tips here */
