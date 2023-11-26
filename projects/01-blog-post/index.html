@@ -16,9 +16,9 @@
                 <!-- Step 1.2: Inside the Unordered List, put the items Home, Blog, Popular, and Contact for Navigation-->
                 <ul>
                     <li><a href="#home">Home</a></li>
-                    <li>Blog</li>
-                    <li>Popular</li>
-                    <li>Contacts</li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#popular">Popular</a></li>
+                    <li><a href="#contact">Contacts</a></li>
                 </ul>
             </nav>
             <section>
@@ -36,7 +36,7 @@
         </header>
 
         <main class="main-content">
-            <div class="blog"> <!-- Created a div to contain the "blog" -->
+            <div id="blog" class="blog"> <!-- Created a div to contain the "blog" -->
                 <h2>BLOGS</h2>
                 <article class="posts"> <!-- Created an article element for "posts" to group the individual blog posts -->
                     <div class="post"> <!-- Created individual divs for the  "post" -->
@@ -98,10 +98,11 @@
             </div>
 
             
-            <div class="p-blogs"> <!-- Inside the main is a semantic element for "sidebar" -->
+            <div id="popular" class="p-blogs"> <!-- Inside the main is a semantic element for "sidebar" -->
                 <!-- Step 5: Inside the aside section, create two divs, one for popular-posts, and one for social-side -->
                 
                 <div> <!-- div for "popular-posts-side" -->
+                    <hr class="divider">
                     <h2>POPULAR POSTS</h2>
                     <!-- Create a subheading:  POPULAR POSTS -->
                     <!-- Under this subheading, create another div for "popular-posts", this will put all of the popular posts div into one div-->
@@ -159,26 +160,35 @@
                 </div>
             </div>
 
-            <div> <!-- div for "social-side" -->
+            <div id="contact"class="social-side"> <!-- div for "social-side" -->
                 <!-- create a subheading:  FOLLOW US -->
                 <!-- under this subheading, c reate another div for social media links, this will put all of the social media links into one div-->
                 <!-- Inside the social media links div, add the picture from the folder of socials and create an anchor tag for the Facebook link: https://www.facebook.com/ -->
                 <!-- Inside the social media links div, add the picture from the folder of socials and create an anchor tag for the Twitter link: https://twitter.com/ -->
                 <!-- Inside the social media links div, add the picture from the folder of socials and create an anchor tag for the Instagram link: https://www.instagram.com/ -->
                 <!-- Inside the social media links div, add the picture from the folder of socials and create an anchor tag for the LinkedIn link: https://www.linkedin.com/ -->
+                <hr class="divider">
                 <h2>FOLLOW US</h2>
-                <div>
-                    <img src="images/social/facebook.png" alt="">
-                    <a href="https://www.facebook.com/"></a>
+                <div class="social-links">
+                    <div>
+                        <img src="images/social/facebook.png" alt="">
+                        <a href="https://www.facebook.com/"></a>
+                    </div>
 
-                    <img src="images/social/twitter.png" alt="">
-                    <a href="https://twitter.com/"></a>
+                    <div>
+                        <img src="images/social/twitter.png" alt="">
+                        <a href="https://twitter.com/"></a>
+                    </div>
 
-                    <img src="images/social/pinterest.png" alt="">
-                    <a href="https://www.instagram.com/"></a>
+                    <div>
+                        <img src="images/social/pinterest.png" alt="">
+                        <a href="https://www.instagram.com/"></a>
+                    </div>
 
-                    <img src="images/social/linkedin.png" alt="">
-                    <a href="https://www.linkedin.com/"></a>
+                    <div>
+                        <img src="images/social/linkedin.png" alt="">
+                        <a href="https://www.linkedin.com/"></a>
+                    </div>
                 </div>
             </div>
         </main>
