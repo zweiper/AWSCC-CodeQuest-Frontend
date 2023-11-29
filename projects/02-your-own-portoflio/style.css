@@ -181,3 +181,39 @@ nav .nav-links{
     width: 88%;
 }
 
+.about{
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(to right, var(--orange) 45%, var(--gray)45%);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+}
+
+.about .page-title{
+    height: 100%;
+    width: 100%;
+    color: var(--white);
+    padding-left: 45px;
+}
+
+.page-title h2{
+    font-family: Karantina;
+    text-transform: uppercase;
+    font-size: 80px;
+    margin:45px 0 0;
+}
+
+.page-title p{
+    max-width: 40%;
+}
+
+.page-title img{
+    margin-top: 30%;
+}
+
+.about .about-content{
+    max-width: 44em;
+}
+
