@@ -51,6 +51,13 @@ img{
     width: 100%;
     height: 100vh;
     background: linear-gradient(to right, var(--orange) 35%, var(--gray)35%);
+}
+
+.fpage-wrapper{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
     position: relative;
 }
 
@@ -61,9 +68,7 @@ nav{
     text-transform: uppercase;
     color: var(--white);
     text-align: center;
-    align-items: center;
-    justify-content: center;
-    position: relative;
+    padding: 0 0 12px;
 }
 
 nav h1{
@@ -76,7 +81,7 @@ nav h1{
 
 nav ul{
     display: inline-flex;
-    gap: 54px;
+    gap: 50px;
 }
 
 nav .nav-links{
@@ -91,13 +96,36 @@ nav .nav-links{
     color: var(--white);
 }
 
-.home-page .self{
-    height: 450px;
-    width: 350px;
-    background: var(--orange);
+.home-page{
+    width: 100%;
+    height: 90%;
     position: relative;
-    left: 20%;
-    margin-top: 70px;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    justify-content: space-between;
+}
+
+.info{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    padding-left: 15em;
+    padding-right: 50px;
+}
+
+.vertical-line{
+    height: 95%;
+}
+
+.home-page .self{
+    height: 400px;
+    width: 45%;
+    background: var(--orange);
     box-shadow: -4px 0 3px 2px var(--orange-shadow);
 }
 
@@ -108,9 +136,6 @@ nav .nav-links{
 }
 
 .home-page .leftpos{
-    position: absolute;
-    left: 53%;
-    top: 40%;
     font-family: 'Kanit', sans-serif;
     text-transform: uppercase;
     color: var(--white);
@@ -120,6 +145,7 @@ nav .nav-links{
     font-style: italic;
     font-weight: lighter;
     font-size: 40px;
+    max-width: 20em;
 }
 
 .name span{
@@ -133,65 +159,25 @@ nav .nav-links{
     margin-top: 15px;
     background: var(--orange);
     padding: 10px;
-    width: 80%;
+    width: 100%;
     font-size: 25px;
 }
 
 .socials{
-    position: absolute;
-    top: 92%;
-    left:62px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    padding-right: 50px;
+    justify-content: space-between;
 }
 
 .socials a{
-    margin-left: 12px;
+    margin-right: 8px;
 }
 
-.home-page .line-borders{
-    position: absolute;
-    width: 100%;
-    height: 789px;
-}
-
-
-.home-page .right-v{
-    position: absolute;
-    width: 1px;
-    height: 600px;
-    top: -50px;
-    left: 89%;
-}
-
-.home-page .left-v{
-    position: absolute;
-    width: 1px;
-    height: 600px;
-    top: -50px;
-    left: -1px;
-}
-  
-.home-page .left-h{
-    position: absolute;
-    width: 100%;
-    height: 1px;
-    top: -85px;
-    left: -30%;
-}
-  
-.home-page .right-h{
-    position: absolute;
-    width: 100%;
-    height: 1px;
-    top: -85px;
-    left: 26%;
-}
-
-.home-page .bottom-line{
-    position: absolute;
-    width: 68em;
-    height: 1px;
-    top: 75%;
-    left: 140px;
-    object-fit: cover;
+.bottom-line{
+    width: 88%;
 }
 
