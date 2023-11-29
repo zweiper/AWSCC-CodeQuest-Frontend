@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
     <title>Portfolio</title>
 </head>
 <body>
     <!-- nav-page -->
     <div class="fpage">
-        <div class="gradient"></div>
         <div class="fpage-wrapper">
             <nav>
                 <div class="portfolio">
@@ -85,82 +85,116 @@
         </div>
 
         <div class="about-content">
-            <h3>hello!</h3>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-
-            <div class="skill-contain">
-                <hr>
-
-                <h3>skills</h3>
-                <p>Programming Languages that I’m good at!</p>
-
-                <img src="assets/images/html.png" alt="">
-                <p>html</p>
-
-                <img src="assets/images/css.png" alt="">
-                <p>css</p>
-
-                <img src="assets/images/javascript-logo-24.png" alt="">
-                <p>javascript</p>
-
-                <img src="assets/images/python.png" alt="">
-                <p>python</p>
-
-                <img src="assets/images/java.png" alt="">
-                <p>java</p>
-
-                <img src="assets/images/c-plus-plus.png" alt="">
-                <p>c/c++</p>
+            <hr class="above-line about-line">
+            <div class="head-about">
+                <h3>hello!</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
             </div>
-            <hr>
+
+            <div class="skill-wrap">
+                <div class="skill-contain">
+                    <h3>skills</h3>
+                    <p>Programming Languages that I’m good at!</p>
+    
+                    <div class="logo-wrap">
+                       <div class="flex-col">
+                            <img src="assets/images/html.png" alt="">
+                            <p>html</p>
+                       </div>
+        
+                        <div class="flex-col">
+                            <img src="assets/images/css.png" alt="">
+                            <p>css</p>
+                        </div>
+        
+                        <div class="flex-col">
+                            <img src="assets/images/javascript-logo-24.png" alt="">
+                            <p>javascript</p>
+                        </div>
+        
+                        <div class="flex-col">
+                            <img src="assets/images/python.png" alt="">
+                            <p>python</p>
+                        </div>
+        
+                        <div class="flex-col">
+                            <img src="assets/images/java.png" alt="">
+                            <p>java</p>
+                        </div>
+        
+                        <div class="flex-col">
+                            <img src="assets/images/c-plus-plus.png" alt="">
+                            <p>c/c++</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="below-line about-line">
         </div>
     </div>
 
     <!-- works page -->
     <div id="works" class="works">
-        <h2>my <br>works</h2>
-        <hr>
-
-        <!-- work container -->
-        <div class="work-contain">
-            <img src="assets/images/blog-web.png" alt="">
-
-            <div class="overlay">
-                <p>work title</p>
-                <p>description</p>
+        <div class="work-wrapper">
+            <div class="work-title">
+                <h2>my <br>works</h2>
+                <hr>
             </div>
 
-            <img src="assets/images/blog-web.png" alt="">
-
-            <div class="overlay">
-                <p>work title</p>
-                <p>description</p>
-            </div>
-
-            <img src="assets/images/blog-web.png" alt="">
-
-            <div class="overlay">
-                <p>work title</p>
-                <p>description</p>
-            </div>
-            
-            <!-- sections of work -->
-            <div class="work-section">
-                <div class="sections">
-                    <img src="assets/images/blog-web.png" alt="">
-                    <div class="overlay"></div>
+            <!-- work container -->
+            <div class="work-contain">
+                <div class="img-holder">
+                    <div class="img-contain">
+                        <img class="mySlides" src="assets/images/blog-web.png" alt="">
+                    </div>
+                    <div class="overlay">
+                        <h3>Blog Website</h3>
+                        <p>
+                            A mini-project that I made for the AWSCC 30-Day FrontEnd CodeQuest. 
+                            It highlights the usage of grid and flex layout, as well as the application
+                            of it for a responsive web application. 
+                        </p>
+                    </div>
                 </div>
 
-                <div class="sections">
-                    <img src="assets/images/blog-web.png" alt="">
-                    <div class="overlay"></div>
+                <div class="img-holder" style="display: none">
+                    <div class="img-contain hide">
+                        <img class="mySlides" src="assets/images/blog-web.png" alt="">
+    
+                        <div class="overlay">
+                            <p>work title</p>
+                            <p>description</p>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="sections">
-                    <img src="assets/images/blog-web.png" alt="">
-                    <div class="overlay"></div>
+                <div class="img-holder" style="display: none">
+                    <div class="img-contain">
+                        <img class="mySlides" src="assets/images/blog-web.png" alt="">
+    
+                        <div class="overlay">
+                            <p>work title</p>
+                            <p>description</p>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <!-- sections of work -->
+                <div class="work-section">
+                    <div class="sections">
+                        <img class="img-section" src="assets/images/blog-web.png" alt="" onclick="currentDiv(1)">
+                    </div>
+
+                    <div class="sections">
+                        <img class="img-section" src="assets/images/blog-web.png" alt="" onclick="currentDiv(2)">
+                    </div>
+
+                    <div class="sections">
+                        <img class="img-section" src="assets/images/blog-web.png" alt="" onclick="currentDiv(3)">
+                    </div>
                 </div>
             </div>
         </div>

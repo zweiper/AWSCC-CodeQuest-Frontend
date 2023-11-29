@@ -43,10 +43,11 @@ img{
     max-width: 100%;
 }
 
-.fpage, .about, .works, footer{
+.fpage, footer{
     padding: 45px 80px;
 }
 
+/* first page */
 .fpage{
     width: 100%;
     height: 100vh;
@@ -141,11 +142,11 @@ nav .nav-links{
     color: var(--white);
 }
 
-.leftpos .name{
+.leftpos .name h2{
     font-style: italic;
-    font-weight: lighter;
-    font-size: 40px;
+    font-size: 50px;
     max-width: 20em;
+    font-weight: 275;
 }
 
 .name span{
@@ -161,6 +162,10 @@ nav .nav-links{
     padding: 10px;
     width: 100%;
     font-size: 25px;
+}
+
+.position h3{
+    font-weight: 500;
 }
 
 .socials{
@@ -181,6 +186,8 @@ nav .nav-links{
     width: 88%;
 }
 
+/* second page */
+
 .about{
     height: 100vh;
     width: 100%;
@@ -193,20 +200,22 @@ nav .nav-links{
 
 .about .page-title{
     height: 100%;
-    width: 100%;
+    width: 50%;
     color: var(--white);
-    padding-left: 45px;
+    padding: 45px 80px;
+    background: var(--orange);
 }
 
 .page-title h2{
     font-family: Karantina;
     text-transform: uppercase;
     font-size: 80px;
-    margin:45px 0 0;
+    margin:50px 0 0;
 }
 
 .page-title p{
-    max-width: 40%;
+    max-width: 50%;
+    font-weight: 300;
 }
 
 .page-title img{
@@ -214,6 +223,198 @@ nav .nav-links{
 }
 
 .about .about-content{
-    max-width: 44em;
+    width: 60%;
+    /* background: linear-gradient(180deg, #212529 0%, #292929 100%); */
+    display: flex;
+    flex-direction: column;
 }
 
+.about .about-line{
+    width: 70%;
+    border: none;
+    height: 1px;
+    color: var(--white); 
+    background-color: var(--white);
+}
+
+.about-content .above-line{
+    margin-top: 70px;
+}
+
+.about-content .below-line{
+    align-self: flex-end;
+}
+
+.about .head-about{
+    padding: 45px 80px;
+}
+
+.head-about h3{
+    font-family: Karantina;
+    color: var(--orange);
+    text-transform: uppercase;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.head-about p{
+    color: var(--white);
+    line-height: 30px;
+    font-weight: 300;
+}
+
+.skill-wrap{
+    padding: 45px 80px;
+}
+
+.about-content .skill-contain{
+    border-radius: 10px;
+    background: var(--orange);
+    padding: 15px; 
+    color: var(--gray);
+    box-shadow: 0px 10px 4px 0px #0D0E10;
+}
+
+.skill-contain h3{
+    text-transform: uppercase;
+    font-family: Karantina;
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.skill-contain p{
+    margin-bottom: 15px;
+}
+
+.skill-contain .logo-wrap{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.logo-wrap .flex-col img{
+    width: 30px;
+    height: 30px;
+}
+
+.flex-col{
+    margin-bottom: 15px;
+}
+
+.flex-col:hover{
+    scale: 1.1;
+    transition: 2.2 ease-in;
+}
+
+/* third page */
+.works{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to right, var(--orange) 35%, var(--gray)35%);
+}
+
+.work-wrapper{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.work-wrapper .work-title{
+    height: 100%;
+    width: 35%;
+    padding: 0 80px;
+    padding-top: 45px;
+}
+
+.work-title h2{
+    font-family: Karantina;
+    text-transform: uppercase;
+    color: var(--white);
+    font-size: 80px;
+    margin-top: 50px;
+}
+
+.work-title hr{
+    border: none;
+    height: 1px;
+    color: var(--white); 
+    background-color: var(--white);
+}
+
+.work-contain{
+    width: 65%;
+    padding: 45px 80px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    gap: 52px;
+}
+
+.work-contain .img-contain{
+    width: 100%;
+    height: 461px;
+    position: relative;
+}
+
+.img-holder{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.img-contain img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay{
+    position:absolute;
+    height: 461px;
+    width: 100%;
+    background: linear-gradient(to bottom, var(--gray), black);
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.overlay:hover{
+    opacity: 0.9;
+    transition: all 0.2s ease;
+}
+
+.overlay h3{
+    font-family: Karantina;
+    color: var(--orange);
+    text-transform: uppercase;
+    font-size: 25px;
+}
+
+.overlay p{
+    color: var(--white);
+    line-height: 30px;
+    font-weight: 300;
+    max-width: 30em;
+    text-align: center;
+}
+
+.work-contain .work-section{
+    width: 100%;
+    height: 138px;
+    display: flex;
+    flex-direction: row;
+    gap: 11px;
+}
