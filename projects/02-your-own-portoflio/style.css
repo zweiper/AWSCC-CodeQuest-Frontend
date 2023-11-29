@@ -43,7 +43,7 @@ img{
     max-width: 100%;
 }
 
-.fpage, footer{
+.fpage{
     padding: 45px 80px;
 }
 
@@ -417,4 +417,84 @@ nav .nav-links{
     display: flex;
     flex-direction: row;
     gap: 11px;
+}
+
+/* footer styles */
+footer{
+    background: var(--gray);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer p{
+    color: var(--white);
+    font-weight: 300;
+}
+
+footer .foot-title{
+    border: 1px solid var(--orange);
+    border-left: none;
+    border-right: none;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px 85px;
+}
+
+.foot-title h2{
+    font-family: Karantina;
+    font-size: 30px;
+    color: var(--orange);
+    font-weight: 400;
+}
+
+.foot-title h2 span{
+    color: var(--white);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 35px;
+    letter-spacing: -1px;
+}
+
+footer .super-container{
+    width: 100%;
+    padding: 10px 85px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+} 
+
+ footer .call{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+
+.call .call-contain{
+    display: flex;
+}
+
+.call-contain img{
+    margin-right: 10px;
+}
+
+footer .foot-socials{
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    width: 100%;
+    padding-top: 25px;
+}
+
+.super-container .credits{
+    margin-bottom: 15px;
 }
