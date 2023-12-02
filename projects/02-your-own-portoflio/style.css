@@ -27,7 +27,7 @@ body{
     background: var(--orange);
     margin: 0;
     overflow-x: hidden;
-    height: auto;
+    max-height: 100vw;
     font-family: 'Karla', sans-serif;
 }
 
@@ -43,15 +43,14 @@ img{
     max-width: 100%;
 }
 
-.fpage{
-    padding: 45px 80px;
-}
-
 /* first page */
 .fpage{
     width: 100%;
     height: 100vh;
     background: linear-gradient(to right, var(--orange) 35%, var(--gray)35%);
+    position: relative;
+    overflow-x: hidden;
+    padding: 45px 80px;
 }
 
 .fpage-wrapper{
@@ -60,23 +59,25 @@ img{
     height: 100%;
     width: 100%;
     position: relative;
+    overflow-x: hidden;
 }
 
 nav{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
+    max-height: 3vw;
     text-transform: uppercase;
     color: var(--white);
     text-align: center;
-    padding: 0 0 12px;
+    padding: 12px 0;
+    margin-bottom: 15px;
 }
 
 nav h1{
-    align-self: flex-start;
     font-family: 'Kanit', sans-serif;
-    margin: 0;
-    padding: 0;
     font-size: 18px;
 }
 
@@ -115,17 +116,22 @@ nav .nav-links{
     align-items: center;
     justify-content: center;
     gap: 80px;
-    padding-left: 15em;
-    padding-right: 50px;
+    padding: 0 10em;
 }
 
-.vertical-line{
-    height: 95%;
+.home-page{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    border-left: 1px solid var(--white);
+    border-right: 1px solid var(--white);
 }
 
 .home-page .self{
-    height: 400px;
-    width: 45%;
+    height: 30vw;
+    width: 100%;
     background: var(--orange);
     box-shadow: -4px 0 3px 2px var(--orange-shadow);
 }
@@ -140,19 +146,21 @@ nav .nav-links{
     font-family: 'Kanit', sans-serif;
     text-transform: uppercase;
     color: var(--white);
+    width: 100%;
 }
 
 .leftpos .name h2{
     font-style: italic;
-    font-size: 50px;
+    font-size: 40px;
     max-width: 20em;
     font-weight: 275;
+    flex-wrap: wrap;
 }
 
 .name span{
     font-style: none;
     font-weight: 800;
-    font-size: 100px;
+    font-size: 90px;
     line-height: 60px;
 }
 
@@ -161,7 +169,7 @@ nav .nav-links{
     background: var(--orange);
     padding: 10px;
     width: 100%;
-    font-size: 25px;
+    font-size: 18px;
 }
 
 .position h3{
@@ -169,21 +177,166 @@ nav .nav-links{
 }
 
 .socials{
-    position: relative;
     display: flex;
     flex-direction: row;
-    width: 100%;
-    height: 100%;
-    padding-right: 50px;
     justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 3vw;
+    margin-top: 25px;
 }
 
 .socials a{
-    margin-right: 8px;
+    margin-right: 16px;
 }
 
-.bottom-line{
-    width: 88%;
+.border-frame{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 25px;
+}
+
+.border{
+    background: var(--white);
+    height: 1px;
+    width: 100%;
+}
+
+.socials .links{
+    display: flex;
+
+}
+
+@media only screen and (min-width: 1920px) {    
+    .fpage{
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    .home-page .self{
+        width: 70%;
+    }
+
+    .leftpos .name h2{
+        width: 15em;
+        font-size: 50px;
+    }
+
+    .name span{
+        font-size: 110px
+    }
+
+    nav, .position{
+        font-size: 20px;
+    }
+    
+}
+
+@media only screen and (max-width: 1130px) {
+    .home-page .self{
+        width: 60%;
+    }
+
+    .name h2{
+        font-size: 30px;
+    }
+
+    .name span{
+        font-size: 50px;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    .home-page .self{
+        display: none;
+    }
+
+    .leftpos .name h2{
+        width: 15em;
+        font-size: 50px;
+    }
+
+    .name span{
+        font-size: 110px
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .home-page .self{
+        display: none;
+    }
+
+    .leftpos .name h2{
+        width: 15em;
+        font-size: 30px;
+    }
+
+    .name span{
+        font-size: 90px
+    }
+
+    nav ul, .border-frame .b{
+        display: none;
+    }
+
+    nav .border-frame{
+        display:flex;
+        flex-wrap: wrap;
+        width: 85%;
+    }
+
+    nav{
+        flex-wrap: wrap;
+    }
+}
+
+@media only screen and (max-width: 414px) {
+    .fpage{
+        background: linear-gradient(to right, var(--orange) 10%, var(--gray)10%);
+        padding: 0;
+    }
+
+    .border-frame .a{
+        display: block;
+    }
+
+    nav .border-frame, .socials{
+        display:none;
+    }
+
+    .home-page{
+        border: none;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .info{
+        gap: 0;
+        padding: 0 15px;
+    }
+
+    .leftpos .name h2{
+        width: 100%;
+        font-weight: 275;
+        font-size: 30px;
+    }
+
+    .name span{
+        font-size: 50px;
+        font-weight: 800;
+    }
+
+    .position{
+        font-size: 15px;
+        font-weight: 500;
+    }
+
 }
 
 /* second page */
@@ -196,6 +349,7 @@ nav .nav-links{
     flex-direction: row;
     justify-content: space-between;
     position: relative;
+    overflow-x: hidden;
 }
 
 .about .page-title{
