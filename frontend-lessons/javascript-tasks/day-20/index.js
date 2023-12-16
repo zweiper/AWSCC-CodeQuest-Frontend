@@ -37,14 +37,22 @@ document.body.appendChild(newSection);
 // Task 4: Removing Elements
 
 // 7. Remove the first paragraph from the document.
+allParagraph[0].remove();
 
 // Task 5: Handling Events
 
 // 8. Add a click event listener to the div with the ID "header" that logs "Header clicked!" to the console when clicked.
+head.addEventListener("click", function(){
+    console.log("Header Clicked!");
+});
 
 // Task 6: Advanced Element Manipulation
 
 // 9. Create an array of colors.
+const colors = ["blue", "green", "yellow", "black", "orange", "white"];
 // 10. Use a loop to iterate over all paragraphs and assign a different background color from the array to each paragraph.
+for(let i = 0; i < colors.length; i++){
+    allParagraph[i].style.backgroundColor = colors[i];
+};
 
 // *These tasks will help you practice selecting, modifying, creating, and removing elements from the DOM using JavaScript. Good luck! 🌐*
