@@ -6,13 +6,16 @@
 // 2. Use JavaScript to select and log the following elements to the console:
 
 //    a. All paragraphs on the page using `getElementsByTagName`.
+const paragraphs = document.getElementsByTagName('p');
    
 //    b. All elements with the class "info" using `getElementsByClassName`.
+infos = document.getElementsByClassName('info');
    
 //    c. The element with the ID "header" using `getElementById`.
-   
-//    d. The first element with the class "highlight" using `querySelector`.
+head = document.getElementById('header');
 
+//    d. The first element with the class "highlight" using `querySelector`.
+highlight = document.querySelector('highlight');
 // Task 2: Modifying Elements
 
 // 3. Change the text content of the second paragraph to "This paragraph is now updated!".
