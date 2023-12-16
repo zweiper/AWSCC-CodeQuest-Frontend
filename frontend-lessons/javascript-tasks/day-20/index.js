@@ -9,16 +9,21 @@
 const paragraphs = document.getElementsByTagName('p');
    
 //    b. All elements with the class "info" using `getElementsByClassName`.
-infos = document.getElementsByClassName('info');
+const infos = document.getElementsByClassName('info');
    
 //    c. The element with the ID "header" using `getElementById`.
-head = document.getElementById('header');
+const head = document.getElementById('header');
 
 //    d. The first element with the class "highlight" using `querySelector`.
-highlight = document.querySelector('highlight');
+const highlight = document.querySelector('highlight');
 // Task 2: Modifying Elements
 
 // 3. Change the text content of the second paragraph to "This paragraph is now updated!".
+const allParagraph = document.querySelectorAll('p');
+const secondParagraph = allParagraph[1];
+
+secondParagraph.textContent = "This paragraph is now updated!";
+
 // 4. Change the background color of the div with the ID "header" to a different color of your choice.
 
 // Task 3: Creating and Appending Elements
