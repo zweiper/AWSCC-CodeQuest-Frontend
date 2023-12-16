@@ -25,12 +25,15 @@ const secondParagraph = allParagraph[1];
 secondParagraph.textContent = "This paragraph is now updated!";
 
 // 4. Change the background color of the div with the ID "header" to a different color of your choice.
+head.style.backgroundColor = "purple";
 
 // Task 3: Creating and Appending Elements
 
 // 5. Create a new `h3` element with the text "New Section" using `document.createElement`.
+const newSection = document.createElement('h3');
+newSection.innerText = "New Section";
 // 6. Append the newly created `h3` element to the end of the body of the HTML document.
-
+document.body.appendChild(newSection);
 // Task 4: Removing Elements
 
 // 7. Remove the first paragraph from the document.
