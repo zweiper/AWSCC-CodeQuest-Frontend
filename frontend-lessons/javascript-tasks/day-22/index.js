@@ -4,6 +4,11 @@
 
 // 2. Use JavaScript to create an `<img>` element dynamically. Set the `src` attribute to an image URL, and append it to the "dynamicContainer" div.
 
+const dynamicContainer = document.getElementById('dynamicContainer');
+const newImg = document.createElement('img');
+newImg.src = 'https://i.scdn.co/image/ab6761610000e5ebb0527c32ded4594c557f613a';
+dynamicContainer.appendChild(newImg);
+
 //    ```html
 //    <!-- HTML Setup -->
 //    <!DOCTYPE html>
@@ -43,10 +48,16 @@
 // 4. Use JavaScript to perform the following tasks:
 
 //    a. Select and remove a specific list item using the `removeChild()` method.
+const ul = document.getElementById('yuel');
+const elementToRemove = document.getElementById('alis');
+ul.removeChild(elementToRemove);
 
 //    b. Remove the last list item using the `remove()` method.
+const elementToRemove2 = document.getElementById('alis2');
+ul.removeChild(elementToRemove2);
 
 //    c. Clear all list items from the `<ul>` using the `innerHTML` property.
+ul.innerHTML = '';
 
 //    ```html
 //    <!-- HTML Setup -->
